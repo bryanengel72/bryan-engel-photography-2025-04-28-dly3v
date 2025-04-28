@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bryan Engel Photography - Professional Photography Services</title>
     <meta name="description" content="Experience premium photography services with Bryan Engel. Personalized sessions, quick turnaround, and professional results.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@heroicons/react@1.0.6/outline.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .hover-shadow {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body class="font-sans antialiased bg-white">
     <!-- Announcement Bar -->
@@ -18,19 +44,23 @@
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center space-x-10">
-                <a href="#" class="text-2xl font-bold text-gray-900">Bryan Engel</a>
+                <a href="https://bryanengel72.github.io/bryan-engel-photography-2025-04-28-dly3v" class="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors duration-300">Bryan Engel</a>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Portfolio</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Services</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">About</a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Contact</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Portfolio</a>
+                    <a href="#services" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Services</a>
+                    <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Contact</a>
                 </div>
             </div>
-            <button class="md:hidden">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
-                </svg>
+            <button class="mobile-menu-button md:hidden" aria-label="Toggle menu">
+                <i class="fas fa-bars text-2xl"></i>
             </button>
+            <div class="mobile-menu hidden md:hidden absolute top-full left-0 w-full bg-white border-t shadow-lg">
+                <a href="#portfolio" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Portfolio</a>
+                <a href="#services" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Services</a>
+                <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About</a>
+                <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+            </div>
         </nav>
     </header>
 
@@ -42,49 +72,41 @@
         </div>
         <div class="relative container mx-auto px-4 h-full flex items-center">
             <div class="max-w-4xl mx-auto text-center text-white">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Bryan Engel Photography</h1>
-                <p class="text-xl md:text-2xl mb-8">Taking your photography to the next level</p>
-                <a href="#" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:transform hover:scale-105 transition-all duration-300 shadow-lg">Book a Session</a>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-[fadeIn_1s_ease-in]">Bryan Engel Photography</h1>
+                <p class="text-xl md:text-2xl mb-8 animate-[fadeIn_1s_ease-in_0.5s]">Capturing Life's Most Precious Moments</p>
+                <a href="#contact" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">Book a Session</a>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-24 bg-gray-50">
+    <section id="services" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Booking -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                <!-- Feature cards with enhanced hover effects -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
                     <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
+                        <i class="fas fa-calendar-alt text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Easy Booking</h3>
-                    <p class="text-gray-600">Schedule your photography session with our simple online booking system.</p>
+                    <p class="text-gray-600">Schedule your photography session with our simple online booking system. Choose your preferred date and time, and we'll take care of the rest.</p>
                 </div>
 
-                <!-- Pricing -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
                     <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+                        <i class="fas fa-dollar-sign text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Transparent Pricing</h3>
-                    <p class="text-gray-600">Clear, upfront pricing with no hidden fees or surprises.</p>
+                    <p class="text-gray-600">Clear, upfront pricing with no hidden fees. Get detailed information about our packages and customize them to your needs.</p>
                 </div>
 
-                <!-- Testimonials -->
-                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
                     <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-                        </svg>
+                        <i class="fas fa-comments text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Client Testimonials</h3>
-                    <p class="text-gray-600">See what our satisfied clients have to say about their experience.</p>
+                    <p class="text-gray-600">Read authentic reviews from our satisfied clients. Their experiences showcase our commitment to excellence.</p>
                 </div>
             </div>
         </div>
@@ -97,11 +119,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
                     <h2 class="text-3xl font-bold mb-6">Personalized Experience</h2>
-                    <p class="text-gray-600 mb-8">Every photography session is tailored to your unique vision and requirements, ensuring a truly personalized experience that captures your story.</p>
-                    <a href="#" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300">Learn More</a>
+                    <p class="text-gray-600 mb-8">Every photography session is meticulously tailored to capture your unique story. We take time to understand your vision, preferences, and goals to create stunning images that reflect your personality and style. Our experienced team ensures a comfortable and enjoyable experience from start to finish.</p>
+                    <a href="#contact" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 transform">Learn More</a>
                 </div>
                 <div class="order-1 md:order-2">
-                    <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" alt="Personalized photography experience" class="rounded-lg shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" alt="Personalized photography experience" class="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 </div>
             </div>
         </div>
@@ -112,12 +134,12 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" alt="Quick turnaround time" class="rounded-lg shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" alt="Quick turnaround time" class="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 </div>
                 <div>
                     <h2 class="text-3xl font-bold mb-6">Quick Turnaround Time</h2>
-                    <p class="text-gray-600 mb-8">Get your professionally edited photos within days, not weeks. We understand the importance of timely delivery without compromising quality.</p>
-                    <a href="#" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300">View Timeline</a>
+                    <p class="text-gray-600 mb-8">We understand the excitement of seeing your photos. That's why we guarantee delivery within 5 business days, without compromising on quality. Each image is carefully edited and enhanced to ensure the best possible results, while maintaining quick delivery times.</p>
+                    <a href="#contact" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 transform">View Timeline</a>
                 </div>
             </div>
         </div>
@@ -129,42 +151,168 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
                     <h2 class="text-3xl font-bold mb-6">Professional Quality</h2>
-                    <p class="text-gray-600 mb-8">With years of experience and top-of-the-line equipment, we deliver stunning professional results that exceed expectations.</p>
-                    <a href="#" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300">View Portfolio</a>
+                    <p class="text-gray-600 mb-8">With over a decade of experience and state-of-the-art equipment, we deliver exceptional results that exceed expectations. Our commitment to excellence shows in every detail, from composition to lighting and post-processing. Trust us to create timeless images that you'll cherish forever.</p>
+                    <a href="#portfolio" class="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 transform">View Portfolio</a>
                 </div>
                 <div class="order-1 md:order-2">
-                    <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" alt="Professional photography equipment" class="rounded-lg shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" alt="Professional photography equipment" class="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">About Us</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-gray-600 mb-8">Founded in 2010, Bryan Engel Photography began with a passion for capturing life's most precious moments. What started as a hobby quickly evolved into a full-service photography studio, driven by the desire to provide exceptional quality and personalized service to every client.</p>
+                <p class="text-gray-600">Our mission is to create timeless, emotional photographs that tell your unique story. We believe in building lasting relationships with our clients, maintaining the highest standards of professionalism, and delivering images that exceed expectations. Our core values of creativity, integrity, and excellence guide everything we do.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Client Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Bryan captured our wedding perfectly! The attention to detail and quick turnaround time exceeded our expectations."</p>
+                    <p class="font-semibold">Sarah Johnson</p>
+                    <p class="text-sm text-gray-500">Wedding Client</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Professional, creative, and incredibly talented. The family portraits turned out amazing!"</p>
+                    <p class="font-semibold">Michael Thompson</p>
+                    <p class="text-sm text-gray-500">Family Portrait Client</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The corporate headshots were exactly what we needed. Fast, professional service and great results."</p>
+                    <p class="font-semibold">Lisa Chen</p>
+                    <p class="text-sm text-gray-500">Corporate Client</p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Bryan has an amazing eye for detail. Our engagement photos were absolutely stunning!"</p>
+                    <p class="font-semibold">David & Emma Wilson</p>
+                    <p class="text-sm text-gray-500">Engagement Session</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 bg-gray-50">
+    <section id="faq" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-lg shadow-md">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <button class="w-full px-6 py-4 text-left focus:outline-none">
                         <div class="flex items-center justify-between">
-                            <span class="font-semibold">What types of photography do you offer?</span>
-                            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <span class="font-semibold">What types of photography services do you offer?</span>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </div>
+                        <div class="mt-2 text-gray-600">
+                            We offer a wide range of services including weddings, portraits, corporate events, family sessions, and commercial photography.
+                        </div>
                     </button>
                 </div>
-                <!-- Add more FAQ items as needed -->
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="w-full px-6 py-4 text-left focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="font-semibold">How long does it take to receive the final photos?</span>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="mt-2 text-gray-600">
+                            We guarantee delivery within 5 business days for most sessions. Wedding collections may take up to 2 weeks.
+                        </div>
+                    </button>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="w-full px-6 py-4 text-left focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="font-semibold">What is your pricing structure?</span>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="mt-2 text-gray-600">
+                            Our packages start at $500 for basic sessions. Custom packages are available to suit your specific needs and budget.
+                        </div>
+                    </button>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="w-full px-6 py-4 text-left focus:outline-none">
+                        <div class="flex items-center justify-between">
+                            <span class="font-semibold">Do you provide digital files of the photos?</span>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <div class="mt-2 text-gray-600">
+                            Yes, all packages include high-resolution digital files with personal printing rights.
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact CTA -->
-    <section class="py-24 bg-gray-900 text-white">
-        <div class="container mx-auto px-4 text-center">
+    <section id="contact" class="py-24 bg-gray-900 text-white relative">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1600&h=900&fit=crop&q=80" alt="Photography background" class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">Ready to Create Something Amazing?</h2>
-            <p class="text-xl mb-12">Let's discuss your photography needs</p>
-            <a href="mailto:bryanengel@icloud.com" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:transform hover:scale-105 transition-all duration-300">Contact Now</a>
+            <p class="text-xl mb-12">Let's discuss your photography needs and create memories that last a lifetime</p>
+            <a href="mailto:bryanengel@icloud.com" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">Contact Now</a>
         </div>
     </section>
 
@@ -180,23 +328,31 @@
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Portfolio</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors duration-300">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors duration-300">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                        <li><a href="https://bryanengel72.github.io/bryan-engel-photography-2025-04-28-dly3v/blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://bryanengel72.github.io/bryan-engel-photography-2025-04-28-dly3v/privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="https://bryanengel72.github.io/bryan-engel-photography-2025-04-28-dly3v/terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <p class="text-gray-400">Email: bryanengel@icloud.com</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
-                    <div class="flex space-x-4">
+                    <p class="text-gray-400 mb-2">Email: bryanengel@icloud.com</p>
+                    <div class="flex space-x-4 mt-4">
                         <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            <i class="fab fa-facebook-f text-xl"></i>
                         </a>
                         <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
                         </a>
                     </div>
                 </div>
@@ -206,5 +362,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
